@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M&E BrainBoost</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #111;
+      text-align: center;
+    }
+    header {
+      background: #C24F44;
+      color: white;
+      padding: 20px;
+    }
+    .lang-buttons {
+      margin: 20px;
+    }
+    .lang-buttons button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background: #C24F44;
+      color: white;
+      cursor: pointer;
+    }
+    .lang-buttons button:hover {
+      background: #a53f39;
+    }
+    .content {
+      margin: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>M&E BRAINBOOST</h1>
+    <p>Children teach children</p>
+  </header>
+
+  <div class="lang-buttons">
+    <button onclick="showContent('kk')">Қазақша</button>
+    <button onclick="showContent('en')">English</button>
+  </div>
+
+  <div class="content">
+    <div id="kk" style="display: none;">
+      <h2>Қош келдіңіз!</h2>
+      <p>Бұл балалар балаларды үйрететін платформа.</p>
+    </div>
+
+    <div id="en" style="display: none;">
+      <h2>Welcome!</h2>
+      <p>This is a platform where children teach children.</p>
+    </div>
+  </div>
+
+  <script>
+    function showContent(lang) {
+      document.getElementById('kk').style.display = 'none';
+      document.getElementById('en').style.display = 'none';
+      document.getElementById(lang).style.display = 'block';
+    }
+
+    // Показываем английскую версию по умолчанию
+    showContent('en');
+  </script>
+</body>
+        </html>
